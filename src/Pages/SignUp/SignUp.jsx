@@ -34,7 +34,7 @@ const SignUp = () => {
             <div className="hero-content flex-col md:flex-row-reverse">
                 <div className="text-center lg:text-left">
 
-                    <img src={spiderman} className="max-w-[468px] rounded-lg shadow-2xl" />
+                    <img src={spiderman} className="max-w-[520px] rounded-lg shadow-2xl" />
                 </div>
                 <div className="divider divider-horizontal"></div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
