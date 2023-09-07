@@ -26,6 +26,8 @@ const SignUp = () => {
 
         console.log(user);
         form.reset()
+
+
     }
 
 
@@ -66,7 +68,7 @@ const SignUp = () => {
                             <button className="btn btn-primary">Submit</button>
                         </div>
                         <div className="form-control mt-6">
-                            <p className="">Already Registered? Please <Link to='/login'><span className='underline decoration-dashed'>login</span></Link> </p>
+                            <p className="">already registered? Please <Link to='/login'><span className='no-underline hover:underline text-green-300'>login</span></Link> </p>
                         </div>
                     </form>
                 </div>
