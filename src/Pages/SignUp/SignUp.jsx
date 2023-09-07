@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import app from '../../Firebase/firebaseConfig';
 import spiderman from '../../assets/images/spiderman2.png'
-import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, updateProfile } from 'firebase/auth';
 
 const auth = getAuth(app)
 
@@ -17,8 +17,10 @@ const SignUp = () => {
         // create user on firebase
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
-                const loggedUser = result.user;
-                console.log(loggedUser)
+                const user = result.user;
+
+                console.log(user)
+                updateUserData(user, name)
             })
             .catch(error =>
                 console.error(error)
@@ -28,6 +30,18 @@ const SignUp = () => {
         form.reset()
 
 
+    }
+
+    const updateUserData = (user, name) => {
+        updateProfile(user, {
+            displayName: name
+        })
+            .then(() => {
+
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
 
