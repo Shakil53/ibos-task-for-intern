@@ -6,6 +6,7 @@ const NavBar = () => {
         <li><Link to='/login'>Log in</Link></li>
 
         <li><Link to='/signup'>Register</Link></li>
+        <li><Link to='/task'>Task</Link></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -25,9 +26,7 @@ const NavBar = () => {
                     {NavOption}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">LogOut</a>
-            </div>
+
         </div>
     );
 };

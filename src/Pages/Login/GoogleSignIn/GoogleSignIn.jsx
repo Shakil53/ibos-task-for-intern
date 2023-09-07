@@ -19,6 +19,7 @@ const GoogleSignIn = () => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser)
                 setUser(loggedInUser)
+
             })
             .catch(error => {
                 console.log('error', error)
@@ -49,6 +50,7 @@ const GoogleSignIn = () => {
                     <div className="avatar online">
                         <div className="w-24 rounded-full">
                             <img src={user?.photoURL} />
+
                         </div>
                     </div>
 
